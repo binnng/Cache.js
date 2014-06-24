@@ -1,0 +1,10 @@
+{
+  "name": "binnng-server",
+  "version": "0.1.0",
+  "devDependencies": {
+    "connect": "^2.19.4",
+    "express": "^4.4.4",
+    "ip": "^0.3.0",
+    "open": "0.0.5"
+  }
+}
