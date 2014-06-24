@@ -12,8 +12,9 @@ app.use "/scripts", express.static(__dirname + "/scripts")
 app.get "/", (req, res) ->
   res.send fs.readFileSync("index.html", "utf-8")
 
-app.get "/cache.js", (req, res) ->
-  res.send fs.readFileSync("cache.js", "utf-8")
+app.get "/min.cache.js", (req, res) ->
+  res.setHeader "content-type", "text/javascript"
+  res.send fs.readFileSync("min.cache.js", "utf-8")
 
 app.listen 3000
 console.log('Listening on port 3000...')

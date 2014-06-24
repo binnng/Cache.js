@@ -21,8 +21,9 @@ app.get("/", function(req, res) {
   return res.send(fs.readFileSync("index.html", "utf-8"));
 });
 
-app.get("/cache.js", function(req, res) {
-  return res.send(fs.readFileSync("cache.js", "utf-8"));
+app.get("/min.cache.js", function(req, res) {
+  res.setHeader("content-type", "text/javascript");
+  return res.send(fs.readFileSync("min.cache.js", "utf-8"));
 });
 
 app.listen(3000);

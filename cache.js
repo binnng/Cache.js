@@ -7,8 +7,7 @@
 
       var cssFiles = Cache.getFiles('css'),
         jsFiles = Cache.getFiles('js'),
-        content,
-        fileUrl;
+        content;
 
       cssFiles.forEach(function(file) {
         content = Cache.getStoredContent(file);
