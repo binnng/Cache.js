@@ -2,7 +2,7 @@
   var Store = WIN['localStorage'],
     HEAD = DOC.querySelector('head');
 
-  var Cache = WIN['Cache'] = {
+  var Cache = {
     init: function() {
 
       var cssFiles = Cache.getFiles('css'),
@@ -93,6 +93,6 @@
     }
   };
 
-}(this, document);
+  Cache.init();
 
-Cache.init();
+}(this, document);
